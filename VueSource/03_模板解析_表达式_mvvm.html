@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03_模板解析_表达式_vue</title>
+</head>
+<body>
+<!--
+模板：html中嵌套js的文件，js:1.指令 2. 表达式
+
+所有的指令是为标签服务的，是操作标签的。
+-->
+<div id="test">
+  <p>{{name}}</p>
+</div>
+
+
+<script type="text/javascript" src="js/mvvm/compile.js"></script>
+<script type="text/javascript" src="js/mvvm/mvvm.js"></script>
+<script type="text/javascript" src="js/mvvm/observer.js"></script>
+<script type="text/javascript" src="js/mvvm/watcher.js"></script>
+<script type="text/javascript">
+  new MVVM({
+    el:'#test',
+    data:{
+      name:'feifei2'
+    }
+  })
+
+
+
+
+
+  // new MVVM({
+  //   el: '#test',
+  //   data: {
+  //     name: 'SADAMU'
+  //   }
+  // })
+</script>
+</body>
+</html>
