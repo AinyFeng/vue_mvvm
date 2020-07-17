@@ -32,7 +32,7 @@ Observer.prototype = {
         Object.defineProperty(data, key, {
             enumerable: true, // 可枚举
             configurable: false, // 不能再define
-            get: function() {
+            get: function() {// 返回值
                 // 建立dep与watcher的关系
                 if (Dep.target) {
                     dep.depend();

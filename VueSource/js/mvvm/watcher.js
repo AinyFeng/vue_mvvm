@@ -33,12 +33,13 @@ Watcher.prototype = {
       this.depIds[dep.id] = dep;
     }
   },
-  //得表达式的值。
+  //得表达式的值。建立dep与watcher的关系
   get: function () {
+    // 给dep指定当前的watcher
     Dep.target = this;
     // 获取当前表达式的值, 内部会导致属性的get()调用，建立dep与watcher的关系
     var value = this.getVMVal();
-  //去除dep中的
+    //去除dep中指定的当前watcher
     Dep.target = null;
     return value;
   },
